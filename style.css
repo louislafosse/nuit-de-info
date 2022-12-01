@@ -1,24 +1,14 @@
-body, #app {
+body, #app, html {
   position: absolute;
   top: 0;
   left: 0;
+  margin: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-}
-
-#concombre {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 100px;
-  height: 300px;
-  background-color: green;
-  border-radius: 12px;
-  transform: translate(-50%, -50%);
+  overflow-y: hidden;
 }
 
 body {
     position: relative;
-    background: #0C467B;
+    background-color: #0C467B;
 }
