@@ -22,3 +22,9 @@ body {
     position: relative;
     background: #0C467B;
 }
+#put_condom {
+  width: 50px;
+  height: 100px;
+  position: absolute;
+  background-color: #F7EF99;
+}
