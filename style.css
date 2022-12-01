@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+#LOL {
+  font-family: 'Lilita One';
+  font-style: normal;
+  font-weight: 400;
+}
+
 body, #app {
   position: absolute;
   top: 0;
