@@ -8,3 +8,6 @@ function frame(event) {
     width ++;
     elem.style.width = width + 'px';
 }
+function cursor_change() {
+    cursor: url("public/finger_cut.png")
+}
