@@ -8,3 +8,11 @@
   border-radius: 12px;
   transform: translate(-50%, -50%);
 }
+
+body {
+    position: relative;
+    width: 1728px;
+    height: 1117px;
+
+    background: #0C467B;
+}
