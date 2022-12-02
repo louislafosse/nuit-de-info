@@ -18,5 +18,5 @@ function gros_lol() {
     let sentence = Sentences[i];
     document.getElementById("lol").innerText = sentence
 }
-
+gros_lol()
 setInterval(gros_lol, 8000)
