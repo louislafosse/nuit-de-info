@@ -24,11 +24,47 @@
     background: #717171;
 }
 
-#cucumber {
+#center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     position: absolute;
-    left: 50%;
+    left: 45%;
+    z-index: 9999;
     top: 50%;
-    transform: translate(-60%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#pinch {
+    margin-right: -5px;
+    z-index: 10000;
+}
+
+#cucumber {
+    z-index: 9999;
+    height: 180px;
+}
+
+#unrollable{
+    height: 180px;
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+    width: 150px;
+    margin-left: -5px;
+    border: 10px solid #F7EF99;
+    background-color: rgba(247, 239, 153, 0.53);
+    position: absolute;
+    z-index: 9999;
+    left: 40px;
+}
+
+#unroll {
+    width: 10px;
+    height: 220px;
+    background-color: #F7EF99;
+    position: absolute;
+    left: 195px;
+    cursor: ew-resize;
     z-index: 10000;
 }
 
@@ -44,6 +80,7 @@
     position: absolute;
     bottom: -10%;
     left: 20px;
+    z-index: 10000;
     width: 200px;
     height: 215px;
     cursor: url("finger_1.cur"), pointer;
