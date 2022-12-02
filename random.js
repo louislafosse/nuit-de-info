@@ -11,7 +11,12 @@ var Sentences = ["La fellation c'est bien mais avec preservatif c'est mieux",
 "Le sang la principale cause du Sida\n29% des personnes atteintes du VIH découvrent leur séropositivité à un stade avancé de l'infection ",
 "À l'image du comcombre sortez couverts\n",
 "cuCUMber\nCUM"]
-var i = Math.floor(Math.random() * 12);
-console.log(i)
-let sentence = Sentences[i];
-document.getElementById("LOL").innerText = sentence
+
+function gros_lol() {
+    var i = Math.floor(Math.random() * 12);
+    console.log(i)
+    let sentence = Sentences[i];
+    document.getElementById("lol").innerText = sentence
+}
+
+setInterval(gros_lol, 8000)
