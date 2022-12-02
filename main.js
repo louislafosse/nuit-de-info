@@ -74,7 +74,7 @@ document.addEventListener("keydown", function (e) {
 
 Array.from(condoms).forEach(element => {
   element.addEventListener('click', () => {
-    document.getElementById("consigne").innerText = "pose l'emballage au bout de ton concombre"
+    document.getElementById("consigne").innerText = "Pose l'emballage au bout de ton concombre"
     isUnpackaged = 1;
     element.style.backgroundImage = "url('unpackaged_condom.svg')";
     element.style.cursor = "url('pinch.cur'), pointer"
@@ -102,7 +102,7 @@ Array.from(condoms).forEach(element => {
       return;
     if (check_collision(element)) {
       isUnpackaged = 0;
-      document.getElementById("consigne").innerText = "maintiens ctrl. pour PINCER votre emballage \n appuies sur espace pour DEROULER votre emballage "
+      document.getElementById("consigne").innerText = "Maintiens ctrl. pour PINCER votre emballage \n appuies sur espace pour DEROULER votre emballage "
       Array.from(condom_parts).forEach(part => {
         part.style.visibility = "visible"
       })
