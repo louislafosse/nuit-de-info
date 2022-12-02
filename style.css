@@ -59,3 +59,18 @@ body {
     position: relative;
     background-color: #0C467B;
 }
+
+footer {
+  font-family: 'Lilita One';
+  font-size: 20px;
+  color: #b9b9b9;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+font {
+  font-size: 35px;
+}
