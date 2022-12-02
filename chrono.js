@@ -1,4 +1,4 @@
-var sec = 60;
+var sec = 40;
 var T = document.getElementById("tranche")
 var bl = document.getElementById("consigne")
 var blinking;
@@ -10,9 +10,11 @@ function tick() {
         T.innerText = sec
     }
     else {
+        document.getElementById("opaque").style.display = "block"
+        document.getElementById("lost").style.display = "block";
+        bl.style.visibility = "hidden" 
         clearInterval(chrono)
         clearInterval(blinking)
-        bl.style.visibility = "hidden" 
     }
 }
 chrono = setInterval(tick, 1000)

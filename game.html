@@ -10,12 +10,28 @@
   </head>
   <body>
     <div id="app">
+      <div id="lost" style="display: none;">
+        <p style="margin-top: 15%">Perdu!</p>
+        <p>Tu n'as pas protégé ton concombre à temps...</p>
+        <p>Rien n'est perdu : dès aujourd'hui, pense à protéger ton concombre et celui de tes partenaires 
+          <br>
+          <button id="won_b">réessayer</button>
+        </p>
+      </div>
+      <div id="won" style="display: none" >
+        <p style="margin-top: 15%">Gagné!</p>
+        <p>Tu as su protéger ton concombre comme il se doit !</p>
+        <p>Continue ainsi : dès aujourd'hui, pense toujours à protéger ton concombre et celui de tes partenaires 
+          <br>
+          <button id="lost_b">Rejouer</button>
+      </div>
+      <div id="opaque" style="display: none;"></div>
       <a href="index.html">
         <img id="game-logo" src="logo_games.png" />
       </a>
-      <p id="consigne">déchire un emballage pour protéger ton concombre</p>
+      <p id="consigne">Déchire un emballage pour protéger ton concombre</p>
       <div id="game">
-        <div id="tranche">18</div>
+        <div id="tranche">60</div>
         <img id="planche" src="planche-cropped.svg" />
         <div id="center">
             <img src="pinch.svg" alt="" id="pinch" class="condom">
@@ -26,7 +42,7 @@
         <div id="moving_carpet"></div>
       </div>
     </div>
-    <script type="module" src="/main.js"></script>
     <script type="module" src="chrono.js"></script>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

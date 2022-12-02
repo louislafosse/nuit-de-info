@@ -4,6 +4,8 @@ var pos = 0;
 var offset = [0,0];
 var isUnpackaged = 0;
 var width = 50;
+var bl = document.getElementById("consigne")
+var n_unnpacked = 0;
 var isDown = false;
 var keys = {
   "Control": false,
@@ -44,6 +46,14 @@ function move_condom() {
     condoms_width = 0;
     document.getElementById("unrollable").style.width = 150 + 'px';
     document.getElementById("unroll").style.left = 195 + 'px';
+    n_unnpacked++;
+    if (n_unnpacked == 5) {
+      document.getElementById("opaque").style.display = "block"
+      document.getElementById("won").style.display = "block";
+      bl.style.visibility = "hidden" 
+      clearInterval(chrono)
+      clearInterval(blinking)
+    }
   }
   condoms_width += 10;
   document.getElementById("unrollable").style.width = 150 + condoms_width + 'px';
@@ -91,6 +101,7 @@ Array.from(condoms).forEach(element => {
     if (!isUnpackaged || !isDown)
       return;
     if (check_collision(element)) {
+      isUnpackaged = 0;
       document.getElementById("consigne").innerText = "maintiens ctrl. pour PINCER votre emballage \n appuies sur espace pour DEROULER votre emballage "
       Array.from(condom_parts).forEach(part => {
         part.style.visibility = "visible"
@@ -109,3 +120,11 @@ Array.from(condoms).forEach(element => {
 document.addEventListener('mouseup', function() {
   isDown = false;
 }, true);
+
+document.getElementById("won_b").onclick = () => {
+  window.location.reload()
+}
+
+document.getElementById("lost_b").onclick = () => {
+  window.location.reload()
+}
