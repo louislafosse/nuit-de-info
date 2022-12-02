@@ -102,7 +102,7 @@ Array.from(condoms).forEach(element => {
       return;
     if (check_collision(element)) {
       isUnpackaged = 0;
-      document.getElementById("consigne").innerText = "Maintiens ctrl. pour PINCER votre emballage \n appuies sur espace pour DEROULER votre emballage "
+      document.getElementById("consigne").innerText = "Maintiens ctrl. pour PINCER votre emballage \n Appuie sur espace pour DEROULER ton emballage "
       Array.from(condom_parts).forEach(part => {
         part.style.visibility = "visible"
       })
