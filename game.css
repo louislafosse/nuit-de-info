@@ -39,3 +39,16 @@
     transform: translate(-50%, -50%);
     height: 60%;
 }
+
+.package_condom {
+    position: absolute;
+    bottom: -10%;
+    left: 20px;
+    width: 200px;
+    height: 215px;
+    cursor: url("finger_1.cur"), pointer;
+    background-image: url("package_condom.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
