@@ -1,4 +1,3 @@
-import './style.css'
 var id = null;
 var mousePosition;
 var pos = 0;
@@ -6,13 +5,25 @@ var offset = [0,0];
 var isUnpackaged = 0;
 var width = 50;
 var isDown = false;
+var keys = {
+  "Control": false,
+  " ": false
+};
 var condoms = document.getElementsByClassName("package_condom")
 var condom_parts = document.getElementsByClassName("condom");
 var cucumber = document.getElementById("cucumber");
-var condoms_width = 200; 
+var condoms_width = 0;
+var start_width = 50;
 var cucumberPosition = {
   x: cucumber.getBoundingClientRect().left,
   y: cucumber.getBoundingClientRect().y,
+}
+
+for (var i = 0; i < 5; i++, start_width += 270) {
+  var package_condom = document.createElement("div")
+  package_condom.classList.add("package_condom")
+  package_condom.style.left = start_width + "px"
+  document.getElementById("game").appendChild(package_condom)
 }
 
 function check_collision(element) {
@@ -22,16 +33,38 @@ function check_collision(element) {
   return 0;
 }
 
-document.querySelector("body").addEventListener("keypress", frame)
-
-function frame(event) {
-  var elem = document.getElementById("put_condom");
-    width ++;
-    elem.style.width = width + 'px';
+function move_condom() {
+  
+  if (document.getElementById("unrollable").style.visibility != "visible")
+    return
+  if (195 + condoms_width > 500) {
+    Array.from(condom_parts).forEach(part => {
+      part.style.visibility = "hidden"
+    })
+    condoms_width = 0;
+    document.getElementById("unrollable").style.width = 150 + 'px';
+    document.getElementById("unroll").style.left = 195 + 'px';
+  }
+  condoms_width += 10;
+  document.getElementById("unrollable").style.width = 150 + condoms_width + 'px';
+  document.getElementById("unroll").style.left = 195 + condoms_width + 'px';
 }
+
+document.addEventListener("keyup", function (e) {
+  if (e.key == "Control" || e.key == " ")
+    keys[e.key] = false;
+})
+
+document.addEventListener("keydown", function (e) {
+  keys[e.key] = true;
+  if (keys["Control"] && keys[" "]){
+      move_condom()
+  }
+} , false);
 
 Array.from(condoms).forEach(element => {
   element.addEventListener('click', () => {
+    document.getElementById("consigne").innerText = "pose l'emballage au bout de ton concombre"
     isUnpackaged = 1;
     element.style.backgroundImage = "url('unpackaged_condom.svg')";
     element.style.cursor = "url('pinch.cur'), pointer"
@@ -58,6 +91,7 @@ Array.from(condoms).forEach(element => {
     if (!isUnpackaged || !isDown)
       return;
     if (check_collision(element)) {
+      document.getElementById("consigne").innerText = "maintiens ctrl. pour PINCER votre emballage \n appuies sur espace pour DEROULER votre emballage "
       Array.from(condom_parts).forEach(part => {
         part.style.visibility = "visible"
       })

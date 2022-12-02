@@ -4,14 +4,31 @@
     height: 10%;
 }
 
+#game-logo:hover {
+    transform: scale(1.02);
+}
+
 #game {
     position: absolute;
     top: 50%; left: 50%;
-    width: 70%; height: 75%;
+    margin-top: 50px;
+    width: 70%; height: 70%;
     transform: translate(-50%, -50%);
     z-index: 10;
     background-color: rgba(255, 208, 208, 0.52);
     border-radius: 39px;
+}
+
+#consigne {
+    font-size: 40px;
+    height: 100px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Lolita One';
+    font-weight: 400;
+    color: white;
 }
 
 #moving_carpet {
@@ -58,6 +75,23 @@
     left: 40px;
 }
 
+#tranche{
+    position: absolute;
+    font-family: 'Lilita One';
+    color: white;
+    left: 50%;
+    font-size: 52px;
+    text-align: center;
+    line-height: 100px;
+    transform: translateX(-50%);
+    height: 100px;
+    width: 100px;
+    top: 10px;
+    background-position: center;
+    background-size: 100% 100%;
+    background-image: url("Tranche concombre.svg");
+}
+
 #unroll {
     width: 10px;
     height: 220px;
@@ -81,8 +115,8 @@
     bottom: -10%;
     left: 20px;
     z-index: 10000;
-    width: 200px;
-    height: 215px;
+    width: 150px;
+    height: 150px;
     cursor: url("finger_1.cur"), pointer;
     background-image: url("package_condom.svg");
     background-position: center;
