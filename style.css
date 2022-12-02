@@ -4,6 +4,23 @@
   font-family: 'Lilita One';
 }
 
+h1 {
+  margin: auto;
+
+  font-family: 'Lilita One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 160px;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  text-shadow: -2px 1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke: 0.8px #000;
+  transform: rotate(-0.06deg);
+}
+
 body, #app, html {
   position: absolute;
   top: 0;
