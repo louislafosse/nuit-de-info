@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
-#LOL {
-  font-family: 'Lilita One';
+* {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 #chrono {
   font-family: 'Lilita One';
-}
-
-* {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
 }
 
 #button_cucumber {
