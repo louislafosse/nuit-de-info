@@ -3,3 +3,5 @@
 
 the objective was create a game which, through a fun and de-dramatizing approach to sexuality, will help the youngest to
 become actors of their sexual health
+
+![alt text](https://github.com/louislafosse/nuit-de-info/blob/main/img/image.png)
